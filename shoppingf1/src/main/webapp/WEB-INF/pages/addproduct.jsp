@@ -22,7 +22,7 @@
       <li class="active"><a href="index">Home</a></li>
       <li><a href="Category">Product</a></li>
       <li ><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="aboutus">About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>

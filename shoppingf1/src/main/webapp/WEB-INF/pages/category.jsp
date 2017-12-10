@@ -22,7 +22,7 @@
       <li class="active"><a href="index">Home</a></li>
       <li><a href="addCategory">Add New Category</a></li>
       <li ><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="aboutus">About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -48,11 +48,17 @@
 				<td>${ca.cid }</td>
 				<td>${ca.name }</td>
 				<td bgcolor="white"><a href="edit/${ca.cid}">Edit</a></td>
-				<td bgcolor="white"><a href="edit/${ca.cid}">Delete</a></td>
+				<td bgcolor="white"><a href="del/${ca.cid}">Delete</a></td>
 		</tr>
 	</c:forEach>
 	
 	</table>
 	</div>
+	<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Online Copyright <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
 </body>
 </html>

@@ -13,6 +13,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 
+import com.niit.shoppingback.daoimpl.CartLineDaoImpl;
 import com.niit.shoppingback.daoimpl.CategoryDaoImpl;
 import com.niit.shoppingback.daoimpl.CustomerDaoImpl;
 import com.niit.shoppingback.daoimpl.ProductDaoImpl;
@@ -77,6 +78,11 @@ import com.niit.shoppingback.daoimpl.SupplierDaoImpl;
 		@Bean(name = "CustomerDaoImpl")
 		public CustomerDaoImpl getCustomerDao(SessionFactory sf){
 			return new CustomerDaoImpl(sf);
+	}
+		@Autowired
+		@Bean(name = "CartLineDaoImpl")
+		public CartLineDaoImpl getCartLineDao(SessionFactory sf){
+			return new CartLineDaoImpl();
 	}
 
 }

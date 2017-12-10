@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -16,6 +17,7 @@ public class CategoryContrll {
 	
 	static AnnotationConfigApplicationContext ctx;
 	static CategoryDao cg;
+	static int upd;
 	static {
 		ctx = new AnnotationConfigApplicationContext();
 		ctx.scan("com.niit.shoppingback");
@@ -37,6 +39,7 @@ public class CategoryContrll {
 
 	@RequestMapping("/addCategory")
 		public String ct1() {
+			upd=0;
 			return "addcategory";	
 		}
 	@RequestMapping("/saveCategory")
@@ -44,10 +47,24 @@ public class CategoryContrll {
 		Category cx = new Category();
 		cx.setName(req.getParameter("name"));
 		cx.setSid(req.getParameter("sid"));
-		cg.addCategory(cx);
+		if(upd==0)
+			cg.addCategory(cx);
+		else
+			cg.updCategory(cx);
 		return "redirect:category";
 	}
-	
-	
+	@RequestMapping("/del/{id}")
+	public String del(@PathVariable("id")int id){
+		cg.delCategory(id);
+		return "redirect:/category";
+	}
+	@RequestMapping("/edit/{id}")
+	public ModelAndView editCat(@PathVariable("id")int id){
+		Category c = cg.getCategoryById(id);
+		ModelAndView m = new ModelAndView("addcategory");
+		m.addObject("category",c);
+		upd=1;
+		return m;
+	}
 	
 }

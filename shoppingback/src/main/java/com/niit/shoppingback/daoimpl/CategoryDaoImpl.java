@@ -15,6 +15,8 @@ public class CategoryDaoImpl implements CategoryDao {
 	@Autowired
 	SessionFactory sf;
 	
+	static Category cat;
+	
 	public CategoryDaoImpl(SessionFactory sf) {
 		super();
 		this.sf = sf;
@@ -24,7 +26,7 @@ public class CategoryDaoImpl implements CategoryDao {
 	public boolean addCategory(Category c) {
 		Session s = sf.openSession();
 		Transaction t = s.beginTransaction();
-		s.saveOrUpdate(c);
+		s.save(c);
 		t.commit();
 		return true;
 	}
@@ -38,13 +40,22 @@ public class CategoryDaoImpl implements CategoryDao {
 		return true;
 	}
 
+	public boolean updCategory(Category c) {
+		Session s = sf.openSession();
+		Transaction t = s.beginTransaction();
+		cat.setName(c.getName());
+		cat.setSid(c.getSid());
+		s.update(cat);
+		t.commit();
+		return true;
+	}
 	
 	public Category getCategoryById(int id) {
 		Session s = sf.openSession();
 		Transaction t = s.beginTransaction();
-		Category c=s.get(Category.class, id);
+		cat=s.get(Category.class, id);
 		t.commit();
-		return c;
+		return cat;
 	}
 
 	public ArrayList<Category> getAllCategories() {

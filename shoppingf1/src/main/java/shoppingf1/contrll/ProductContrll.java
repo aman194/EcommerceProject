@@ -16,6 +16,7 @@ import com.niit.shoppingback.model.Product;
 public class ProductContrll {
 	static AnnotationConfigApplicationContext ctx;
 	static ProductDao pd;
+	static int upd;
 	static {
 		ctx = new AnnotationConfigApplicationContext();
 		ctx.scan("com.niit.shoppingback");
@@ -37,6 +38,7 @@ public class ProductContrll {
 	
 	@RequestMapping("/addproduct")
 	public String pr1() {
+		upd = 0;
 		return "addproduct";
 		
 	}
@@ -49,7 +51,10 @@ public class ProductContrll {
 		p.setDescription(req.getParameter("desp"));
 		p.setPrice(req.getParameter("price"));
 		p.setStock(req.getParameter("stock"));
-		pd.addProduct(p);
+		if(upd==0)
+			pd.addProduct(p);
+		else
+			pd.updProduct(p);
 		return "redirect:product";
 		}
 	@RequestMapping("/delpro/{id}")
@@ -62,6 +67,7 @@ public class ProductContrll {
 		Product p = pd.getProductById(id);
 		ModelAndView m = new ModelAndView("addproduct");
 		m.addObject("product",p);
+		upd=1;
 		return m;
 }
 	

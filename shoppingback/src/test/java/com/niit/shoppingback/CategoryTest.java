@@ -1,4 +1,5 @@
-/*package com.niit.shoppingback;
+
+package com.niit.shoppingback;
 
 import static org.junit.Assert.*;
 
@@ -26,4 +27,3 @@ public class CategoryTest {
 	}
 
 }
-*/

@@ -16,13 +16,13 @@
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Sivam</a>
+      <a class="navbar-brand" href="index">Sivam</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="index">Home</a></li>
       <li><a href="Category">Category</a></li>
       <li ><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="aboutus">About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -30,14 +30,14 @@
   </div>
 </nav>
 		<div class="container">
-  <form class="form-inline" action="saveCategory" method="post">
+  <form class="form-inline" action="<%=request.getContextPath() %>/saveCategory" method="post">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="${category.name }">
     </div>
     <div class="form-group">
       <label for="sid">Supplier Id:</label>
-      <input type="text" class="form-control" id="sid" placeholder="Enter id" name="sid">
+      <input type="text" class="form-control" id="sid" placeholder="Enter id" name="sid" value="${category.sid }">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
     <button type="reset" class="btn btn-default">Reset</button>

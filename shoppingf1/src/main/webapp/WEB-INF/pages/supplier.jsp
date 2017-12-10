@@ -15,10 +15,10 @@
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Sivam</a>
+      <a class="navbar-brand" href="index">Sivam</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="index">Home</a></li>
       <li><a href="addsupplier">Add New Supplier</a></li>
       <li ><a href="#">Contact</a></li>
       <li><a href="#">About</a></li>
@@ -47,12 +47,18 @@
 		<tr>
 				<td>${su.id }</td>
 				<td>${su.name }</td>
-				<td bgcolor="white"><a href="edit/${su.id}">Edit</a></td>
-				<td bgcolor="white"><a href="edit/${su.id}">Delete</a></td>
+				<td bgcolor="white"><a href="editSup/${su.id}">Edit</a></td>
+				<td bgcolor="white"><a href="delSup/${su.id}">Delete</a></td>
 		</tr>
 	</c:forEach>
 	
 	</table>
 	</div>
+	<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Online Copyright <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
 </body>
 </html>

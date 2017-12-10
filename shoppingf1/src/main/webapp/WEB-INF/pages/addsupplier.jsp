@@ -5,33 +5,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Supplier Details</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
 <body>
-	<div class="container">
-	<div class="row">
-	<div class="col-md-6">
-	</div>
-	
-	
-	</div>
-		<div class="panel-body">
-		<div class="tab-content">
-		<div class="tab-pane fade in active" id="tablprimary">
-	
-	<form method="post" action="<c:url value='/addSupplier'/>" class="form-signing">
-			
-			<h4>class="input_title">Supplier Name</h4>
-			<input class="from_control" type="text" name="name" value="${supplier.name}" required>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index">Sivam</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index">Home</a></li>
+      <li><a href="supplier">Supplier</a></li>
+      <li ><a href="#">Contact</a></li>
+      <li><a href="aboutus">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+	</nav>
+	<form class="form" action="<%= request.getContextPath() %>/savesupplier" method="post">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" value="${supplier.name }" >
+    </div>
 			<br>
-				<button>type="submit" class="btn btn-primary btn-md"></button>
-				<button>type="reset" class"btn btn-primary btn-md"></button>
+				<button type="submit" class="btn btn-default">Submit</button>
+    			<button type="reset" class="btn btn-default">Reset</button>
 				
 	</form>
-	</div>
-	</div>		
-	</div>
-	</div>
 </body>
 </html>

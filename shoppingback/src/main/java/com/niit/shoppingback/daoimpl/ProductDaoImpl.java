@@ -16,6 +16,8 @@ public class ProductDaoImpl implements ProductDao {
 	@Autowired
 	SessionFactory sf;
 	
+	static Product pdt;
+	
 	public ProductDaoImpl(SessionFactory sf) {
 		super();
 		this.sf = sf;
@@ -24,7 +26,7 @@ public class ProductDaoImpl implements ProductDao {
 	public boolean addProduct(Product pa) {
 		Session s =sf.openSession();
 		Transaction t = s.beginTransaction();
-		s.saveOrUpdate(pa);
+		s.save(pa);
 		t.commit();
 		return true;
 	}
@@ -32,19 +34,32 @@ public class ProductDaoImpl implements ProductDao {
 	public boolean delProduct(int id) {
 		Session s = sf.openSession();
 		Transaction t = s.beginTransaction();
-		Product p = s.get(Product.class, id);
-		s.delete(p);
+		pdt = s.get(Product.class, id);
+		Product pa = s.get(Product.class, id);
+		s.delete(pa);
 		t.commit();
 		return true;
 	}
 
-
+	public boolean updProduct(Product pa) {
+		Session s =sf.openSession();
+		pdt.setName(pa.getName());
+		//pdt.setId(pa.getId());
+		pdt.setDescription(pa.getDescription());
+		pdt.setPrice(pa.getPrice());
+		pdt.setStock(pa.getStock());
+		Transaction t = s.beginTransaction();
+		s.update(pdt);
+		t.commit();
+		return true;
+	}
 	public Product getProductById(int id) {
 		Session s = sf.openSession();
 		Transaction t = s.beginTransaction();
+		pdt = s.get(Product.class, id);
 		Product pa = s.get(Product.class, id);
 		t.commit();
-		return pa;
+		return pdt;
 	}
 
 	public ArrayList<Product> getAllProducts() {

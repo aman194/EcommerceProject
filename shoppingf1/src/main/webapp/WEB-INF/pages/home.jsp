@@ -31,6 +31,7 @@
 	
 	</head>
 	<body>
+	
 	<div class="jumbotron">
   <div class="container text-center">
     <h1>Sivam</h1>      
@@ -41,14 +42,15 @@
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Sivam</a>
+      <a class="navbar-brand" href="index">Sivam</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="index">Home</a></li>
       <li ><a href="category">Category</a></li>
       <li ><a href="product">Product</a></li>
       <li ><a href="supplier">Supplier</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="aboutus">About</a></li>
+      <li><a href="ContactUs">ContactUs</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -103,23 +105,23 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-heading">SUPER DEAL</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE"  style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">Buy DinnerSet and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-heading">SUPER DEAL</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE"  style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">Buy Home WallPaper and get one free</div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-heading">OFFER DEAL</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE"  style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">Buy KitchenSet and get free TeaCupSet </div>
       </div>
     </div>
   </div>
@@ -129,63 +131,36 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-heading">KITCHEN DEAL</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">Buy Prestige Pressure Cooker and get 20%off </div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-heading">HOME DECORATE DEAL</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">Buy TvSet and get a gift card</div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-heading">AMAZING DEAL</div>
         <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <div class="panel-footer">Buy HomeAppilances and get a gift card</div>
       </div>
     </div>
   </div>
 </div><br><br>
 </div>
 
-<div class="container-fluid bg-grey">
-  <h2 class="text-center">Contact Us</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> K.Jaynagar, India/p>
-      <p><span class="glyphicon glyphicon-phone"></span> +91 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-    </div>
-    <div class="col-sm-7">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Online Copyright <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+   <p>@2017 Online Copyright <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
 </footer>
 	</body>
 	 

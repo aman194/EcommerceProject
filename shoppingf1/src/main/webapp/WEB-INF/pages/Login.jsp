@@ -10,21 +10,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+    
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Sivam</a>
+      <a class="navbar-brand" href="index">Sivam</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Home Appliances</a></li>
-          <li><a href="#">Kitchen Appliances</a></li>
-          <li><a href="#">Electronics Appliances</a></li>
-        </ul>
-      </li>
-      <li><a href="#">About</a></li>
+      <li class="active"><a href="index">Home</a></li>
+      <li><a href="aboutus">About</a></li>
       </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -34,7 +28,7 @@
 </nav>
 	<div class="container">
   <h2>Login</h2>
-  <form action="/action_page.php">
+ <form name='login' action="signin" method='POST'>
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
@@ -46,9 +40,11 @@
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>
     </div>
-    <span class="psw"> Forgot <a href="#">password?</a></span><br><br>
+
     <button type="submit" class="btn btn-default">Submit</button>
   	<button type="button" class="btn btn-default">Cancel</button>
+    
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     
      
   </form>

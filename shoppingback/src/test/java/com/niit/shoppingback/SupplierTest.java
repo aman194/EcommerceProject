@@ -1,4 +1,4 @@
-/*package com.niit.shoppingback;
+package com.niit.shoppingback;
 
 import static org.junit.Assert.*;
 
@@ -17,7 +17,7 @@ public class SupplierTest {
 		ctx.refresh();
 		SupplierDao sd = (SupplierDao)ctx.getBean("SupplierDaoImpl");
 		Supplier su = new Supplier();
-		su.setSname("moahn");		
+		su.setName("moahn");		
 		assertTrue(sd.addSupplier(su));
 		
 		
@@ -26,4 +26,3 @@ public class SupplierTest {
 	}
 
 }
-*/
